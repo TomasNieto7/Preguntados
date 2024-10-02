@@ -7,13 +7,19 @@ module.exports = {
     extend: {
       colors:{
         'color1': '#6F259B',
-        'color2': '#4F007A',
-        'color3': '#CE93FF'
+        'color2': '#190620',
+        'color3': '#CE93FF',
+        'colorA1' : '#6CE6FF',
+        'color4' : '#FF7BDA',
       },
       backgroundImage: {
-        'radial-gradient': 'radial-gradient(circle at 50%, var(--tw-gradient-stops))',
-      }
+        'radial-gradient': 'radial-gradient(circle , var(--tw-gradient-stops))'
+      
+      },
+      fontFamily: {
+        Queso: ["Bakbak One, sans-serif"]
     },
+  },
   },
   plugins: [],
 }
