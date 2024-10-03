@@ -5,7 +5,7 @@ import GatoBrujo from '../GatoBrujo/GatoBrujo'
 import GatoBrujoElection from '../GatoBrujoElection/GatoBrujoElection'
 import ModalLucky from '../ModalLucky/ModalLucky'
 
-const ContentWildcard = ({ comodin50, comodinLB, setFlagPausa, setEndGame }) => {
+const ContentWildcard = ({ comodin50, comodinLB, setFlagPausa, setEndGame, openModalLose }) => {
   const [statusModal, setStatusModal] = useState(false)
   const [statusModal2, setStatusModal2] = useState(false)
   const [statusModal3, setStatusModal3] = useState(false)
@@ -62,7 +62,7 @@ const ContentWildcard = ({ comodin50, comodinLB, setFlagPausa, setEndGame }) => 
           className="object-cover w-8 h-8 rounded-lg mx-auto"
         />
         <GatoBrujo statusModal={statusModal} closeModal={closeModal} openModal2={openModal2} />
-        <GatoBrujoElection statusModal={statusModal2} closeModal={closeModal2} setEndGame={setEndGame} setFlagModalLB={setFlagModal50} setFlagModal50={setFlagModal50}/>
+        <GatoBrujoElection statusModal={statusModal2} closeModal={closeModal2} setEndGame={setEndGame} setFlagModalLB={setFlagModal50} setFlagModal50={setFlagModal50} openModalLose={openModalLose}/>
       </div>
       <div onClick={openModal3} className={`w-[8rem] h-12 mt-[4px] border-[#6A175E] border-[4px] rounded-3xl flex justify-center items-center 
         select-none ${flagModalLB && 'opacity-20'}`}>

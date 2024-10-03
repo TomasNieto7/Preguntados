@@ -7,17 +7,17 @@ import manoI from '../../img/manoIzq.png'
 import pocionR from '../../img/pocionR.png'
 import pocionI from '../../img/pocionIzq.png'
 
-export default function GatoBrujoElection({ statusModal, closeModal, setEndGame, setFlagModalLB, setFlagModal50 }) {
+export default function GatoBrujoElection({ statusModal, closeModal, setEndGame, setFlagModalLB, setFlagModal50, openModalLose }) {
 
     // Función para manejar el clic en las pociones
     const handlePotionClick = () => {
         // Genera un número aleatorio entre 0 y 4
-        const randomValue = Math.floor(Math.random() * 5);
+        const randomValue = Math.floor(Math.random() * 1);
 
         switch (randomValue) {
             case 0:
                 setEndGame(true);
-                alert("You Lose")
+                openModalLose()
                 break;
             case 1:
                 setFlagModalLB(false);
