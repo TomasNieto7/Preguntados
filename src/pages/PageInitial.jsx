@@ -15,7 +15,7 @@ import ModalLose from '../components/ModalLose/ModalLose';
 const PageInitial = () => {
   const [contesto, setContesto] = useState(false)
   const [endGame, setEndGame] = useState(false)
-  const [indexCuestionario, setindexCuestionario] = useState(9)
+  const [indexCuestionario, setindexCuestionario] = useState(0)
   const [respuestas50, setRespuestas50] = useState([])
   const [respuestasLB, setRespuestasLB] = useState([])
   const [flagPausa, setFlagPausa] = useState(false)
@@ -29,6 +29,7 @@ const PageInitial = () => {
   const navigate = useNavigate()
   const [statusModal, setStatusModal] = useState(false)
   const [statusModalLose, setStatusModalLose] = useState(false)
+  const imagenesPregunta=["/gatoPnt1.jpg","/gatoPnt2.jpg","/gatoPnt3.jpg","/gatoPnt4.jpg","/gatoPnt5.jpg","/gatoPnt6.jpg","/gatoPnt7.jpg","/gatoPnt8.jpg","/gatoPnt9.jpg","/gatoPnt1.jpg0"]
 
   const closeModal = () => {
     setStatusModal(false)
@@ -161,7 +162,7 @@ const PageInitial = () => {
               <Counter mount={30} flag={contesto} index={indexCuestionario} handleEndGame={handleEndGame} flagPausa={flagPausa} />
             </div>
             <div className='ml-10 w-[67rem] h-[21.8rem] bg-white mt-10 rounded-3xl flex justify-center'>
-              <Imagenes src={'/gatos.jpg'} />
+              <Imagenes src={imagenesPregunta[indexCuestionario]} />
               <div className='flex justify-center flex-col absolute mr-[56rem] mt-[7.5rem]'>
                 <ContentWildcard comodin50={comodin50} comodinLB={comodinLB} setFlagPausa={setFlagPausa} setEndGame={setEndGame} />
               </div>
