@@ -1,11 +1,22 @@
 import React from 'react'
 
-const ContentAnswer = () => {
+const ContentAnswer = ({ color, letra, respuesta, onClick, handleFlag, status, endgame }) => {
+  const incorrect = () => {
+    if(status === false)
+    {
+      handleFlag()
+    }
+  }
   return (
     <>
-        <div className='bg-red-600 h-[5.25rem] w-[25.147rem] rounded-3xl'> 
-        hola soy tomas tonto
-
+        <div onClick={incorrect} className={`px-10 h-[5.8rem] w-[29rem] rounded-3xl text-3xl flex justify-start items-center`} 
+        style={endgame===true && status === false ? { backgroundColor: 'black' } : { backgroundColor: color }}>
+          <div>
+            {letra}
+          </div>
+          <div>
+            {respuesta}
+          </div>
         </div>
     </>
   )
