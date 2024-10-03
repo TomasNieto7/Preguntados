@@ -68,7 +68,7 @@ const PageInitial = () => {
   }, [indexCuestionario]); 
   return (
     <>
-      <main onKeyDown={handleKeyDown} className="h-screen w-screen bg-radial-gradient from-color1 via-color1 to-color2">
+      <main onKeyDown={handleKeyDown} className="h-screen w-screen bg-radial-gradient from-color1 via-color1 to-color2 font-Queso">
         <section className="h-full w-full flex justify-around bg-[url('fondo2.png')]">
           <div className='flex flex-col items-center'>
             <div className='bg-color4 w-36 h-36 absolute rounded-full mr-[59rem] mt-2'>
