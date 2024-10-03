@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Counter = ({ mount, index, flag, handleEndGame, flagPausa }) => {
+const Counter = ({ mount, index, flag, handleEndGame, flagPausa, openModalLose }) => {
     const [count, setCount] = useState(mount);
 
     // Actualiza el contador cuando cambia el valor de mount o index
@@ -19,10 +19,10 @@ const Counter = ({ mount, index, flag, handleEndGame, flagPausa }) => {
         }
 
         if (count === 0) {
-            alert("Se te acabó el tiempo");
+            openModalLose()
             handleEndGame();
         }
-    }, [count, flag, flagPausa, handleEndGame]);  // Agrega flagPausa como dependencia
+    }, [count, flag, flagPausa, handleEndGame, openModalLose]);  // Agrega flagPausa como dependencia
 
     return (
         <div className="flex flex-col w-36 h-36 items-center justify-center">

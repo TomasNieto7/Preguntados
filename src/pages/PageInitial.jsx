@@ -158,12 +158,12 @@ const PageInitial = () => {
         <section className="h-full w-full flex justify-around bg-[url('fondo2.png')]">
           <div className='flex flex-col items-center'>
             <div className='bg-color4 w-36 h-36 absolute rounded-full mr-[59rem] mt-2'>
-              <Counter mount={30} flag={contesto} index={indexCuestionario} handleEndGame={handleEndGame} flagPausa={flagPausa} />
+              <Counter mount={20} flag={contesto} index={indexCuestionario} handleEndGame={handleEndGame} flagPausa={flagPausa} openModalLose={openModalLose}/>
             </div>
             <div className='ml-10 w-[67rem] h-[21.8rem] bg-white mt-10 rounded-3xl flex justify-center'>
               <Imagenes src={'/gatos.jpg'} />
               <div className='flex justify-center flex-col absolute mr-[56rem] mt-[7.5rem]'>
-                <ContentWildcard comodin50={comodin50} comodinLB={comodinLB} setFlagPausa={setFlagPausa} setEndGame={setEndGame} />
+                <ContentWildcard comodin50={comodin50} comodinLB={comodinLB} setFlagPausa={setFlagPausa} setEndGame={setEndGame} openModalLose={openModalLose}/>
               </div>
             </div>
             <div className='absolute top-[21rem]'>
