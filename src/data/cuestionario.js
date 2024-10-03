@@ -35,7 +35,7 @@ export const cuestionario = [
             },
             {
                 r1: "Altavoz",
-                flag: true
+                flag: false
             },
             {
                 r1: "Monitor",
@@ -74,7 +74,7 @@ export const cuestionario = [
             },
             {
                 r1: "Teclado",
-                flag: true
+                flag: false
             },
             {
                 r1: "Pantalla tactil",
@@ -174,11 +174,11 @@ export const cuestionario = [
         pregunta: "¿Cuál de los siguientes es un dispositivo de almacenamiento portátil?",
         respuestas: [
             {
-                r1: "Monitor",
+                r1: "USB",
                 flag: true
             },
             {
-                r1: "USB",
+                r1: "Monitor",
                 flag: false
             },
             {
