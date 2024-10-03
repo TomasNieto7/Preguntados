@@ -4,7 +4,7 @@ import React from 'react'
 const Imagenes = ({src}) => {
     return (
         <>
-            <div className='w-96 h-84 mt-4'>
+            <div className='w-96 h-84 mt-4 select-none'>
             <img
               src= {src}
               alt=''
