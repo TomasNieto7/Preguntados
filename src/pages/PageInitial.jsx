@@ -29,7 +29,7 @@ const PageInitial = () => {
   const navigate = useNavigate()
   const [statusModal, setStatusModal] = useState(false)
   const [statusModalLose, setStatusModalLose] = useState(false)
-  const imagenesPregunta=["/gatoPnt1.jpg","/gatoPnt2.jpg","/gatoPnt3.jpg","/gatoPnt4.jpg","/gatoPnt5.jpg","/gatoPnt6.jpg","/gatoPnt7.jpg","/gatoPnt8.jpg","/gatoPnt9.jpg","/gatoPnt1.jpg0"]
+  const imagenesPregunta=["/gatoPnt1.jpg","/gatoPnt2.jpg","/gatoPnt3.jpg","/gatoPnt4.jpg","/gatoPnt5.jpg","/gatoPnt6.jpg","/gatoPnt7.jpg","/gatoPnt8.jpg","/gatoPnt9.jpg","/gatoPnt10.jpg"]
 
   const closeModal = () => {
     setStatusModal(false)
@@ -164,7 +164,8 @@ const PageInitial = () => {
             <div className='ml-10 w-[67rem] h-[21.8rem] bg-white mt-10 rounded-3xl flex justify-center'>
               <Imagenes src={imagenesPregunta[indexCuestionario]} />
               <div className='flex justify-center flex-col absolute mr-[56rem] mt-[7.5rem]'>
-                <ContentWildcard comodin50={comodin50} comodinLB={comodinLB} setFlagPausa={setFlagPausa} setEndGame={setEndGame} openModalLose={openModalLose}/>
+                <ContentWildcard comodin50={comodin50} comodinLB={comodinLB} setFlagPausa={setFlagPausa} setEndGame={setEndGame} 
+                openModalLose={openModalLose} openModalWin={openModal}/>
               </div>
             </div>
             <div className='absolute top-[21rem]'>
