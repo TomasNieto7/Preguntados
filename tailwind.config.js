@@ -13,10 +13,11 @@ module.exports = {
         'color4': '#FF7BDA',
       },
       backgroundImage: {
-        'radial-gradient': 'radial-gradient(circle , var(--tw-gradient-stops))'
-
+        'radial-gradient': 'radial-gradient(circle at 50%, var(--tw-gradient-stops))'
       },
       fontFamily: {
+        miFuente: ['MiF', 'sans-serif'],
+        'radial-gradient': 'radial-gradient(circle , var(--tw-gradient-stops))',
         Queso: ["Bakbak One, sans-serif"],
         bahianita: ['Bahianita', 'sans-serif'],
       },
