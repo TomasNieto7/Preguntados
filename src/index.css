@@ -1,3 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    @apply font-Queso
+}
+
+@font-face {
+    font-family: 'MiF';
+    src: url('./Bouncy-Thin-PERSONAL_USE_ONLY.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

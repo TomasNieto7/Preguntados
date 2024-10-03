@@ -11,8 +11,11 @@ module.exports = {
         'color3': '#CE93FF'
       },
       backgroundImage: {
-        'radial-gradient': 'radial-gradient(circle at 50%, var(--tw-gradient-stops))',
-      }
+        'radial-gradient': 'radial-gradient(circle at 50%, var(--tw-gradient-stops))'
+      },
+      fontFamily: {
+        miFuente: ['MiF', 'sans-serif'],
+      },
     },
   },
   plugins: [],
