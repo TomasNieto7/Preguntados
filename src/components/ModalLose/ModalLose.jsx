@@ -23,9 +23,16 @@ const ModalLose = ({ statusModal, closeModal, handleNavigate }) => {
 
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto" onClick={handleModal}>
                 <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div className='w-96 h-32 rounded-md flex items-center justify-center font-Queso text-[5rem] bg-white'>
-                        Perdiste
+                    <img src="/cat1L.gif" alt="" className='absolute bottom-0 left-5' />
+
+                    <div className='absolute top-[10rem] right-[37rem] flex flex-col items-center justify-center'>
+                        <div className='w-96 h-32 rounded-md font-Queso text-[5rem] bg-white '>
+                            Perdiste
+                        </div>
+                        <img src="/cat2L.gif" alt="" />
                     </div>
+                    <img src="/cat1L.gif" alt="" className='absolute bottom-0 right-5' />
+
                 </div>
             </div>
         </Dialog>

@@ -30,6 +30,7 @@ const ModalWin = ({ statusModal, closeModal, handleNavigate }) => {
                         Felicidades has ganado! 50000 pejecoins!!
                     </div>
                     <img src="/cat1.gif" alt="" className='absolute top-10 right-6'/>
+                    <img src="/cat6.gif" alt="" className='absolute bottom-10 right-50 w-[30rem] h-[20rem]'/>
                     <img src="/cat4.gif" alt="" className='absolute bottom-10 right-6'/>
                 </div>
             </div>

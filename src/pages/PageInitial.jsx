@@ -15,7 +15,7 @@ import ModalLose from '../components/ModalLose/ModalLose';
 const PageInitial = () => {
   const [contesto, setContesto] = useState(false)
   const [endGame, setEndGame] = useState(false)
-  const [indexCuestionario, setindexCuestionario] = useState(0)
+  const [indexCuestionario, setindexCuestionario] = useState(9)
   const [respuestas50, setRespuestas50] = useState([])
   const [respuestasLB, setRespuestasLB] = useState([])
   const [flagPausa, setFlagPausa] = useState(false)
