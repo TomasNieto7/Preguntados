@@ -1,16 +1,16 @@
 import React from 'react'
 
-const ContentAnswer = ({ color, letra, respuesta, handleFlag, status, handleEndGame, contestoFlag, respuestas50, indexR, respuestasLB }) => {
+const ContentAnswer = ({ color, letra, respuesta, handleFlag, status, handleEndGame, contestoFlag, respuestas50, indexR, respuestasLB, openModalCorrect, openModalIncorrect }) => {
   const contesto = () => {
     if (contestoFlag === false) {
       handleFlag()
     }
     if (status === false && contestoFlag === false) {
       handleEndGame()
-      alert("Incorrecto")
+      openModalIncorrect()
     }
     if (status === true && contestoFlag === false) {
-      alert("Correcto")
+      openModalCorrect()
     }
   }
   return (

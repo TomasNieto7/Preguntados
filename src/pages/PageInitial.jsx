@@ -10,6 +10,8 @@ import Imagenes from '../components/imagenes/Imagenes';
 import { useNavigate } from 'react-router-dom';
 import ModalWin from '../components/ModalWin/ModalWin';
 import ModalLose from '../components/ModalLose/ModalLose';
+import ModalIncorrect from '../components/ModalIncorrect/ModalIncorrect';
+import ModalCorrect from '../components/ModalCorrect/ModalCorrect';
 
 
 const PageInitial = () => {
@@ -29,7 +31,23 @@ const PageInitial = () => {
   const navigate = useNavigate()
   const [statusModal, setStatusModal] = useState(false)
   const [statusModalLose, setStatusModalLose] = useState(false)
+  const [statusModalIncorrect, setStatusModalIncorrect] = useState(false)
+  const [statusModalCorrect, setStatusModalCorrect] = useState(false)
   const imagenesPregunta=["/gatoPnt1.jpg","/gatoPnt2.jpg","/gatoPnt3.jpg","/gatoPnt4.jpg","/gatoPnt5.jpg","/gatoPnt6.jpg","/gatoPnt7.jpg","/gatoPnt8.jpg","/gatoPnt9.jpg","/gatoPnt10.jpg"]
+
+  const closeModalCorrect = () => {
+    setStatusModalCorrect(false)
+  }
+  const openModalCorrect = () => {
+    setStatusModalCorrect(true)
+  }
+
+  const closeModalIncorrect = () => {
+    setStatusModalIncorrect(false)
+  }
+  const openModalIncorrect = () => {
+    setStatusModalIncorrect(true)
+  }
 
   const closeModal = () => {
     setStatusModal(false)
@@ -176,13 +194,13 @@ const PageInitial = () => {
                 {coloresUno.map((color, index) => (<ContentAnswer key={index} color={color} letra={letRespuesta[index]}
                   respuesta={dataCuestionario[indexCuestionario].respuestas[index].r1}
                   status={dataCuestionario[indexCuestionario].respuestas[index].flag} handleFlag={handleFlag} handleEndGame={handleEndGame}
-                  contestoFlag={contesto} respuestas50={respuestas50} indexR={index} respuestasLB={respuestasLB} />))}
+                  contestoFlag={contesto} respuestas50={respuestas50} indexR={index} respuestasLB={respuestasLB} openModalCorrect={openModalCorrect} openModalIncorrect={openModalIncorrect}/>))}
               </div>
               <div className='flex justify-around flex-col h-full'>
                 {coloresDos.map((color, index) => (<ContentAnswer key={index} color={color} letra={letRespuesta2[index]}
                   respuesta={dataCuestionario[indexCuestionario].respuestas[index + 2].r1}
                   status={dataCuestionario[indexCuestionario].respuestas[index + 2].flag} handleFlag={handleFlag} handleEndGame={handleEndGame}
-                  contestoFlag={contesto} respuestas50={respuestas50} indexR={index + 2} respuestasLB={respuestasLB} />))}
+                  contestoFlag={contesto} respuestas50={respuestas50} indexR={index + 2} respuestasLB={respuestasLB} openModalCorrect={openModalCorrect} openModalIncorrect={openModalIncorrect} />))}
               </div>
             </div>
           </div>
@@ -198,6 +216,8 @@ const PageInitial = () => {
         </section>
         <ModalWin statusModal={statusModal} closeModal={closeModal} handleNavigate={handleNavigate}/>
         <ModalLose statusModal={statusModalLose} closeModal={closeModalLose} handleNavigate={handleNavigate}/>
+        <ModalIncorrect statusModal={statusModalIncorrect} closeModal={closeModalIncorrect}/>
+        <ModalCorrect statusModal={statusModalCorrect} closeModal={closeModalCorrect}/>
       </main>
     </>
   )
